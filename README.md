@@ -1,3 +1,36 @@
+# 📦 Salesforce → Amazon S3 File Upload (SDK-Based)  
+
+> ⚠️ **Archived for Security Reasons** — This repo is no longer maintained and is kept public for reference only.  
+
+## 🛑 Why This Is Archived  
+This project demonstrates a Salesforce solution for uploading files directly to **Amazon S3** using the **AWS JavaScript SDK**.  
+While functional, this approach **requires exposing your AWS Access & Secret Keys in the front end** in order for the SDK to work.  
+
+That means:  
+- 🔓 Your AWS credentials can be visible to anyone with access to the browser’s network tools.  
+- 💳 This creates the potential for **unauthorized access** to your S3 bucket.  
+- 🚫 **Not safe for public-facing apps** or production environments where security is critical.  
+
+## 🛠️ Intended Use  
+- ✅ **Internal tools** or **trusted environments** where users are authorized and the risk is low.  
+- ❌ **Never** use this method in **public portals**, **untrusted environments**, or where sensitive data is involved.  
+
+## 🔍 Why Keep It Public?  
+I’ve made this repo public so others can:  
+- 📖 Learn how S3 uploads can work from Salesforce using the SDK.  
+- 🔍 Inspect and adapt the code for secure, internal workflows.  
+- ⚠️ Understand the risks before deciding on an architecture.  
+
+## 🔐 Recommended Alternatives  
+If you need a secure approach for S3 uploads from Salesforce:  
+1. 🖥️ **Generate Pre-Signed URLs** on the server side (e.g., Apex, Lambda, API).  
+2. 🛡️ Store your AWS credentials securely — never in client-side code.  
+3. 🔄 Use temporary credentials via AWS STS for short-lived access.  
+
+---
+
+> ⚡ **Use at your own risk** — The code works, but **security should always come first**.  
+
 # Salesforce Files to Amazon S3
 
 <a href="https://githubsfdeploy.herokuapp.com?owner=effordDev&repo=sf-files-2-s3">
